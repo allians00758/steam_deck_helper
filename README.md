@@ -13,7 +13,7 @@
 1. Скачиваем скрипт **[steam_deck_helper_installer.desktop](https://github.com/allians00758/steam_deck_helper/releases/download/dlls/steam_deck_helper_installer.desktop)**
 2. Делаем его исполняемым, для этого открываем Терминал (Консоль) в текущем каталоге и пишем команду:
 
-   **chmod +x ./steam_deck_helper.sh**, или открываем **Свойства** скрипта и во вкладке **Права**, ставим чек бокс **"Является исполняемым"**.
+   **chmod +x ./steam_deck_helper_installer.desktop**, или открываем **Свойства** скрипта и во вкладке **Права**, ставим чек бокс **"Является исполняемым"**.
 4. Запустить ярлык на рабочем столе
    
 **EN**
@@ -29,5 +29,5 @@ Protontricks is required for correct works, at the first launch it will check wh
 1. Download the script **[steam_deck_helper_installer.desktop](https://github.com/allians00758/steam_deck_helper/releases/download/dlls/steam_deck_helper_installer.desktop)**
 2. Make it executable, for this open the Terminal (Konsole) in the script directory and type:
 
-   **chmod +x ./steam_deck_helper.sh**, or open the **Properties** of the script and in the **Rights** tab, check the box **"Is executable"**.
+   **chmod +x ./steam_deck_helper_installer.desktop**, or open the **Properties** of the script and in the **Rights** tab, check the box **"Is executable"**.
 4. Launch shortcut on desktop
