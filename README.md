@@ -69,6 +69,11 @@
 Откройте **Konsole** (поиск в меню Пуск) и выполните:
 
 ```bash
+curl -L -O https://github.com/allians00758/steam_deck_helper/releases/download/dlls/steam_deck_helper_installer.desktop
+```
+или
+
+```bash
 curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam_deck_helper_installer.desktop
 ```
 
