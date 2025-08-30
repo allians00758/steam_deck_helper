@@ -2,8 +2,7 @@
 
 > Ещё больше инструкций и гайдов — в нашей группе **Steam Deck База Знаний**.
 >
-> • Telegram: https://t.me/steamdeckbase  
-> • GitHub: https://github.com/steamdeckbase  
+> • Telegram: https://t.me/steamdeckbase
 
 ---
 
