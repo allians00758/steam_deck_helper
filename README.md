@@ -46,7 +46,7 @@
 ## Установка
 
 1. **Скачайте инсталлятор** и положите его на Рабочий стол:
-   - `steam_deck_helper_installer.desktop`
+   - `[steam_deck_helper_installer.desktop](https://github.com/allians00758/steam_deck_helper/releases/download/dlls/steam_deck_helper_installer.desktop)`
    - Загрузки доступны в нашем репозитории.
 
 2. **Запустите** файл, нажмите **Продолжить** и следуйте подсказкам.
