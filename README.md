@@ -189,34 +189,61 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 
 ![Открыть-файл-меню](https://i.ibb.co/Ps6B8bw1/image.png)
 
+![https://i.ibb.co/Y79XpFTV/image.png](https://i.ibb.co/Y79XpFTV/image.png)
+
 #### Открыть папку с префиксом
 Быстрое открытие каталога выбранного префикса.
+
+![https://i.ibb.co/cKMn9NJJ/image.png](https://i.ibb.co/cKMn9NJJ/image.png)
+
+![https://i.ibb.co/m5Xm1mdx/image.png](https://i.ibb.co/m5Xm1mdx/image.png)
 
 #### Открыть папку с сохранениями
 Быстрое открытие каталога с **бэкапами сохранений**.
 
+![https://i.ibb.co/j9LhJyXb/image.png](https://i.ibb.co/j9LhJyXb/image.png)
+
 #### Очистить префикс
 Удаление файлов Proton из выбранного префикса.
+
+![https://i.ibb.co/Nnr8HKHb/image.png](https://i.ibb.co/Nnr8HKHb/image.png)
 
 #### Удалить префикс
 Полное удаление префикса.
 
+![https://i.ibb.co/gbK5rQ0B/image.png](https://i.ibb.co/gbK5rQ0B/image.png)
+
 #### Удалить неизвестные префиксы
 Удаляет «осиротевшие» префиксы от ранее установленных игр/приложений, не привязанные к текущей библиотеке (учтите сценарии с несколькими аккаунтами Steam).
+
+![https://i.ibb.co/CKW86df7/image.png](https://i.ibb.co/CKW86df7/image.png)
 
 #### Копировать сохранения
 Бэкап сохранений из выбранных префиксов. Просмотр готовых бэкапов — кнопкой **Открыть папку с сохранениями**.
 
+![https://i.ibb.co/N2b3DFKc/image.png](https://i.ibb.co/N2b3DFKc/image.png)
+
 #### Восстановить сохранения
 Восстановление сохранений в выбранный префикс и удаление ненужных бэкапов через встроенный список.
 
+![https://i.ibb.co/8CqD2Dp/image.png](https://i.ibb.co/8CqD2Dp/image.png)
+
+![https://i.ibb.co/zhYMZVnC/image.png](https://i.ibb.co/zhYMZVnC/image.png)
+
+![https://i.ibb.co/zhYMZVnC/image.png](https://i.ibb.co/zhYMZVnC/image.png)
+
 #### Удалить шейдеры
+
+![https://i.ibb.co/FLFzG2Vk/image.png](https://i.ibb.co/FLFzG2Vk/image.png)
+
 Удаление шейдеров игр:
 - **Удалить шейдеры** — только выбранные.
 - **Удалить все шейдеры** — полностью.
 - **Удалить неизвестные шейдеры** — непривязанные.
 - **Показать папку с шейдерами** — открыть каталог.
 - **Назад** — возвращение в менеджер префиксов.
+
+
 
 #### Установка библиотек и настройка префикса
 Доступно после выбора префикса.
