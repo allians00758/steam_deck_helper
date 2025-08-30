@@ -1,4 +1,6 @@
 # Steam Deck Helper 2.0 — Инструкция
+![Превью](https://i.ibb.co/NdsRTjHC/image.png)
+
 
 > Ещё больше инструкций и гайдов — в нашей группе **Steam Deck База Знаний**.
 >
@@ -67,6 +69,8 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 
 Переместите файл на Рабочий стол и запустите двойным кликом.
 
+![Главное окно](https://i.ibb.co/XZ9RsWNP/image.png)
+
 ### Первый запуск и первичная настройка
 
 1. Выбор языка приложения.
@@ -82,6 +86,8 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 ## Инструкция по использованию
 
 ### Главное меню
+
+![Главное окно](https://i.ibb.co/M5GByXg7/image.png)
 
 Главное меню разделено на три части:
 
@@ -109,6 +115,8 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 
 ### Deck‑оптимизации
 
+![Deck‑оптимизации-меню](https://i.ibb.co/Q3nBS27X/image.png)
+
 Раздел для установки/удаления оптимизаций для Steam Deck в автоматическом режиме. Подробности каждой опции смотрите в отдельной инструкции по оптимизации или через кнопку **«Инструкция»** в приложении.
 
 [⬆️ Наверх](#содержание)
@@ -116,6 +124,8 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 ---
 
 ### Инструменты
+
+![Инструменты-меню](https://i.ibb.co/HpL6svks/image.png)
 
 Раздел для автоматизированной установки программ, утилит и исправлений. Доступно (состав может меняться):
 
@@ -152,6 +162,8 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 
 ### Параметры запуска
 
+![Параметры-запуска-меню](https://i.ibb.co/zhXNZjxF/image.png)
+
 Раздел для **составления и массового применения** параметров запуска к выбранным играм.
 
 **Как использовать:**
@@ -164,6 +176,8 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 
 ### Менеджер префиксов
 
+![Параметры-запуска-меню](https://i.ibb.co/BKwtmgcp/image.png)
+
 Самый большой раздел. Вверху отображается список префиксов игр, внизу — кнопки управления.
 
 #### Открыть файл
@@ -172,6 +186,8 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 > Для удобства диалог показывает только поддерживаемые расширения.
 
 **Как использовать:** выберите префикс → нажмите **Открыть файл** → укажите нужный файл → **Open**.
+
+![Открыть-файл-меню](https://i.ibb.co/Ps6B8bw1/image.png)
 
 #### Открыть папку с префиксом
 Быстрое открытие каталога выбранного префикса.
@@ -229,17 +245,3 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 - Всем участникам, присылающим отчёты и предложения.
 
 ---
-
-### Материалы для скриншотов (по желанию)
-
-Поместите изображения в `docs/img/` и обновите пути в README:
-
-```markdown
-![Главное окно](docs/img/main.png)
-![Deck‑оптимизации](docs/img/deck-optimizations.png)
-![Инструменты](docs/img/tools.png)
-![Параметры запуска](docs/img/launch-options.png)
-![Менеджер префиксов](docs/img/prefix-manager.png)
-```
-
-> Совет: держите скриншоты в едином стиле, с одинаковой шириной и подписью под каждым изображением через `<sub>Подпись</sub>` для аккуратного вида на GitHub.
