@@ -246,6 +246,10 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 
 
 #### Установка библиотек и настройка префикса
+
+![https://i.ibb.co/HLfjW1mp/image.png](https://i.ibb.co/HLfjW1mp/image.png)
+![https://i.ibb.co/fY1NzR5B/image.png](https://i.ibb.co/fY1NzR5B/image.png)
+
 Доступно после выбора префикса.
 
 Функции:
@@ -256,11 +260,16 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 5. **Настройки префикса** — смена настроек префикса.
 6. **Реестр** — доступ к реестру выбранного префикса.
 
-> Наборы библиотек подготовлены для всех игр, разобранных в группе **Steam Deck База Знаний**.
+> Наборы библиотек подготовлены для всех игр, разобранных в группе телеграмм **Steam Deck База Знаний**.
 
 ##### Установить выбранный набор библиотек
 
 Выберите нужный набор вверху окна и нажмите **Установить выбранный набор библиотек**, затем дождитесь завершения.
+
+![https://i.ibb.co/0pFnHXhV/image.png](https://i.ibb.co/0pFnHXhV/image.png)
+![https://i.ibb.co/5gmGJ9nV/image.png](https://i.ibb.co/5gmGJ9nV/image.png)
+![https://i.ibb.co/S73bNRsG/image.png](https://i.ibb.co/S73bNRsG/image.png)
+![]()
 
 [⬆️ Наверх](#содержание)
 
