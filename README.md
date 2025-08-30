@@ -2,7 +2,7 @@
 
 > Ещё больше инструкций и гайдов — в нашей группе **Steam Deck База Знаний**.
 >
-> • Telegram: https://t.me/steamdeckbase
+> • Telegram: [https://t.me/steamdeckbase](https://t.me/SteamDeckBaseGame)
 
 ---
 
