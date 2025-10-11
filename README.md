@@ -77,7 +77,7 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 
 Переместите файл на Рабочий стол и запустите двойным кликом.
 
-![Главное окно](https://i.ibb.co/XZ9RsWNP/image.png)
+![Главное окно](https://img.steamdeckbase.org/PtjW34rutaN2321/images/68e9ef72e0a6a.png)
 
 ### Первый запуск и первичная настройка
 
