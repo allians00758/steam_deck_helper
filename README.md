@@ -95,7 +95,7 @@ curl -L -O https://repo.steamdeckbase.org/repo/main/repository/sdh_install/steam
 ### Главное меню
 [⬆️ Наверх](#содержание)
 
-![Главное окно](https://i.ibb.co/M5GByXg7/image.png)
+![Главное окно](https://img.steamdeckbase.org/PtjW34rutaN2321/images/68e9ef72e0a6a.png)
 
 Главное меню разделено на три части:
 
