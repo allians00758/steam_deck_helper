@@ -1,4 +1,4 @@
-# Steam Deck Helper 2.1.4 — Инструкция
+# Steam Deck Helper 2.2 — Инструкция
 ![Превью](https://i.ibb.co/NdsRTjHC/image.png)
 
 
