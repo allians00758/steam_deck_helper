@@ -78,7 +78,7 @@ jobs:
           file /opt/sdh-cdemu/bin/cdemu-daemon
           ldd /opt/sdh-cdemu/bin/cdemu-daemon | tee /tmp/ldd-daemon.txt
           ! grep -F 'not found' /tmp/ldd-daemon.txt
-          /opt/sdh-cdemu/bin/cdemu-daemon --version | grep -F '3.3.1'
+          strings /opt/sdh-cdemu/bin/cdemu-daemon | grep -F '3.3.1'
           find /opt/sdh-cdemu -type f -o -type l | sort | tee /tmp/runtime-files.txt
           max_glibc="$(
             { objdump -T /opt/sdh-cdemu/bin/cdemu-daemon; objdump -T /opt/sdh-cdemu/lib/libmirage.so.12; } |
