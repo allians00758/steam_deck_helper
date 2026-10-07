@@ -1,0 +1,42 @@
+name: Build CDEmu runtime artifact
+
+on:
+  push:
+    branches:
+      - build-cdemu-runtime-20261007
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libarchive-tools zstd binutils
+
+      - name: Fetch exact Arch Linux CDEmu daemon package
+        shell: bash
+        run: |
+          set -euo pipefail
+          url='https://archive.archlinux.org/packages/c/cdemu-daemon/cdemu-daemon-3.3.1-1-x86_64.pkg.tar.zst'
+          curl --fail --location --retry 5 --retry-delay 2 -o cdemu-daemon.pkg.tar.zst "$url"
+          mkdir pkg runtime
+          bsdtar -xf cdemu-daemon.pkg.tar.zst -C pkg
+          install -Dm755 pkg/usr/bin/cdemu-daemon runtime/bin/cdemu-daemon
+          cp pkg/.PKGINFO runtime/ARCH-PKGINFO
+          sha256sum cdemu-daemon.pkg.tar.zst runtime/bin/cdemu-daemon | tee runtime/SHA256SUMS
+          file runtime/bin/cdemu-daemon
+          readelf -h runtime/bin/cdemu-daemon
+          readelf -d runtime/bin/cdemu-daemon | tee runtime/READELF-DYNAMIC.txt
+          strings runtime/bin/cdemu-daemon | grep -F '3.3.1' | head || true
+
+      - name: Upload runtime
+        uses: actions/upload-artifact@v4
+        with:
+          name: sdh-cdemu-daemon-3.3.1-arch-x86_64
+          path: runtime/
+          if-no-files-found: error
+          retention-days: 1
