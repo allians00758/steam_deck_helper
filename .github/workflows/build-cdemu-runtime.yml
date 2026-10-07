@@ -17,26 +17,31 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libarchive-tools zstd binutils
 
-      - name: Fetch exact Arch Linux CDEmu daemon package
+      - name: Fetch exact Arch Linux runtime packages
         shell: bash
         run: |
           set -euo pipefail
-          url='https://archive.archlinux.org/packages/c/cdemu-daemon/cdemu-daemon-3.3.1-1-x86_64.pkg.tar.zst'
-          curl --fail --location --retry 5 --retry-delay 2 -o cdemu-daemon.pkg.tar.zst "$url"
-          mkdir pkg runtime
-          bsdtar -xf cdemu-daemon.pkg.tar.zst -C pkg
-          install -Dm755 pkg/usr/bin/cdemu-daemon runtime/bin/cdemu-daemon
-          cp pkg/.PKGINFO runtime/ARCH-PKGINFO
-          sha256sum cdemu-daemon.pkg.tar.zst runtime/bin/cdemu-daemon | tee runtime/SHA256SUMS
-          file runtime/bin/cdemu-daemon
-          readelf -h runtime/bin/cdemu-daemon
-          readelf -d runtime/bin/cdemu-daemon | tee runtime/READELF-DYNAMIC.txt
-          strings runtime/bin/cdemu-daemon | grep -F '3.3.1' | head || true
+          cdemu_url='https://archive.archlinux.org/packages/c/cdemu-daemon/cdemu-daemon-3.3.1-1-x86_64.pkg.tar.zst'
+          libao_url='https://archive.archlinux.org/packages/l/libao/libao-1.2.2-7-x86_64.pkg.tar.zst'
+          curl --fail --location --retry 5 --retry-delay 2 -o cdemu-daemon.pkg.tar.zst "$cdemu_url"
+          curl --fail --location --retry 5 --retry-delay 2 -o libao.pkg.tar.zst "$libao_url"
+          mkdir cdemu-pkg libao-pkg runtime
+          bsdtar -xf cdemu-daemon.pkg.tar.zst -C cdemu-pkg
+          bsdtar -xf libao.pkg.tar.zst -C libao-pkg
+          install -Dm755 cdemu-pkg/usr/bin/cdemu-daemon runtime/bin/cdemu-daemon
+          install -Dm755 libao-pkg/usr/lib/libao.so.4 runtime/lib/libao.so.4
+          cp cdemu-pkg/.PKGINFO runtime/CDEMU-DAEMON-ARCH-PKGINFO
+          cp libao-pkg/.PKGINFO runtime/LIBAO-ARCH-PKGINFO
+          sha256sum cdemu-daemon.pkg.tar.zst libao.pkg.tar.zst runtime/bin/cdemu-daemon runtime/lib/libao.so.4 | tee runtime/SHA256SUMS
+          file runtime/bin/cdemu-daemon runtime/lib/libao.so.4
+          readelf -d runtime/bin/cdemu-daemon | tee runtime/READELF-DAEMON.txt
+          readelf -d runtime/lib/libao.so.4 | tee runtime/READELF-LIBAO.txt
+          strings runtime/lib/libao.so.4 | grep -E 'null|NULL' | head -n 20 || true
 
       - name: Upload runtime
         uses: actions/upload-artifact@v4
         with:
-          name: sdh-cdemu-daemon-3.3.1-arch-x86_64
+          name: sdh-cdemu-userspace-arch-x86_64
           path: runtime/
           if-no-files-found: error
           retention-days: 1
