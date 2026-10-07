@@ -58,16 +58,31 @@ jobs:
           test -x /opt/sdh-cdemu/bin/cdemu-daemon
           readelf -d /opt/sdh-cdemu/bin/cdemu-daemon | grep -F '/opt/sdh-cdemu/lib'
 
-      - name: Install cdemu-client 3.3.1 and gCDEmu 3.3.1 scripts
+      - name: Install cdemu-client 3.3.1 and gCDEmu 3.3.1 into private prefix
         shell: bash
         run: |
           set -euo pipefail
           cd cdemu
           git checkout --detach cdemu-client-3.3.1
-          sudo install -Dm755 cdemu-client/src/cdemu /opt/sdh-cdemu/bin/cdemu
+          cmake -S cdemu-client -B ../build-client \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX=/opt/sdh-cdemu \
+            -DPOST_INSTALL_HOOKS=OFF \
+            -DENABLE_BASH_COMPLETION=OFF
+          cmake --build ../build-client
+          sudo cmake --install ../build-client
+
           git checkout --detach gcdemu-3.3.1
-          sudo install -Dm755 gcdemu/src/gcdemu /opt/sdh-cdemu/bin/gcdemu
-          sudo install -Dm644 gcdemu/data/gcdemu-icon.svg /opt/sdh-cdemu/share/pixmaps/gcdemu-icon.svg
+          cmake -S gcdemu -B ../build-gcdemu \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_INSTALL_PREFIX=/opt/sdh-cdemu \
+            -DPOST_INSTALL_HOOKS=OFF
+          cmake --build ../build-gcdemu
+          sudo cmake --install ../build-gcdemu
+
+          test -x /opt/sdh-cdemu/bin/cdemu
+          test -x /opt/sdh-cdemu/bin/gcdemu
+          test -f /opt/sdh-cdemu/share/glib-2.0/schemas/net.sf.cdemu.gcdemu.gschema.xml
           /opt/sdh-cdemu/bin/cdemu --version | grep -F '3.3.1'
 
       - name: Verify ABI and runtime payload
